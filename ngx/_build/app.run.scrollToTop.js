@@ -3,18 +3,18 @@
   /**
    * Scroll to top when state changes
    */
-  function scrollToTopOnStateChange($window, $rootScope){
+  function scrollToTopOnStateChange($document, $rootScope){
 
     // Update UI when state changes
     $rootScope.$on('$stateChangeSuccess', function () {
 
       // Jump to top
-      angular.element($window).scrollTop(0);
+      $document.scrollTop(0, 0);
     });
   }
 
   // Inject dependencies
-  scrollToTopOnStateChange.$inject = ['$window', '$rootScope'];
+  scrollToTopOnStateChange.$inject = ['$document', '$rootScope'];
 
   // Export
   angular.module('app')
