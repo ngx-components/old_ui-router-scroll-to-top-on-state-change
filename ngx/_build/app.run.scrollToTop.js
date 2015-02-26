@@ -5,7 +5,7 @@
    */
   function scrollToTopOnStateChange($document, $rootScope){
 
-    // Update UI when state changes
+    // Scroll to top when state changes
     $rootScope.$on('$stateChangeSuccess', function () {
 
       // Jump to top
